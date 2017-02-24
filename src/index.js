@@ -11,7 +11,7 @@ function DECtoANY(input, source) {
     return result.split("").reverse().join("");
 }
 module.exports = function getBase(n) {
-    if(n.match(new RegExp("0+"))!==null&&n.match(new RegExp("0+"))[0].length-1) return n-1;
+    if(n.match(new RegExp("0+"))!==null&&n.match(new RegExp("0+"))[0].length-1) return "9".repeat(n.length - 1);
    var i=2;
    while (!DECtoANY(n,i).split("").every(x=>x=="1"))
    {
